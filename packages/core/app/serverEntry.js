@@ -26,7 +26,7 @@ export default async context => {
 
   enhanceApp(context)
 
-  const rootOptions = createAppAPI(context)
+  const rootOptions = await createAppAPI(context)
   const { router, store, apolloProvider } = rootOptions
 
   // This is a fake rendering in the `setup` to get the router instance

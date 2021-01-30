@@ -31,8 +31,8 @@ Vue.mixin({
   }
 })
 
-export default function createAppAPI (context) {
-  const rootOptions = createApp(context)
+export default async function createAppAPI (context) {
+  const rootOptions = await createApp(context)
   return Object.assign({
     req: context.req,
     res: context.res
